@@ -28,28 +28,29 @@ for i in range(qtd):
 
 
 
-while True:
-  total = int(input("Total de Afetados: "))
-  crianca = int(input("Numero de Crinças Afetadas: "))
-  adulto = int(input("Numero de Adultos Afetadas: "))
-  idoso =  int(input("Numero de Idosos Afetados: "))
-  mobilidade_red = int(input("Numero de Pessoas com Mobilidade Reduzida: "))
-  ferido = int(input("Numero de feridos: "))
+for i in range(qtd):
+    print(f"\nCategorias afetadas no Desastre {i+1} ")
+    
+    while True:
+        total = int(input("Total de Afetados: "))
+        crianca = int(input("Numero de Crianças Afetadas: "))
+        adulto = int(input("Numero de Adultos Afetadas: "))
+        idoso = int(input("Numero de Idosos Afetados: "))
+        mobilidade_red = int(input("Numero de Pessoas com Mobilidade Reduzida: "))
+        ferido = int(input("Numero de feridos: "))
 
-  soma = crianca + adulto + idoso + mobilidade_red + ferido
+        soma = crianca + adulto + idoso + mobilidade_red + ferido
 
- 
-
-  if soma == total:
-    total_afetados.append(total)
-    criancas.append(crianca)
-    adultos.append(adulto)
-    idosos.append(idoso)
-    mobilidade_reduzida.append(mobilidade_red)
-    feridos.append(ferido)
-    break
-  else:
-    print("A soma das categorias nao bateram , Tente Novamente Por Favor ")
+        if soma == total:
+            total_afetados.append(total)
+            criancas.append(crianca)
+            adultos.append(adulto)
+            idosos.append(idoso)
+            mobilidade_reduzida.append(mobilidade_red)
+            feridos.append(ferido)
+            break
+        else:
+            print("A soma das categorias não bate com o total. Tente novamente.")
 
 
 print(f"\nTotal de desastres registrados: {qtd}")
@@ -70,18 +71,18 @@ for i in range(qtd):
     total_geral += total_afetados[i]
 
 
-categorias = ["Crianças", "Adultos", "Idosos", "Mobilidade reduzida", "Feridos"]
-valores = [total_criancas, total_adultos, total_idosos, total_mob, total_feridos]
+nomes_categorias = ["Crianças", "Adultos", "Idosos", "Mobilidade reduzida", "Feridos"]
+totais_categorias = [total_criancas, total_adultos, total_idosos, total_mob, total_feridos]
 
-maior_valor = valores[0]
+maior_total = totais_categorias[0]
 indice_maior = 0
 
-for i in range(1, len(valores)):
-    if valores[i] > maior_valor:
-        maior_valor = valores[i]
+for i in range(1, len(totais_categorias)):
+    if totais_categorias[i] > maior_total:
+        maior_total = totais_categorias[i]
         indice_maior = i
 
-categoria_mais_afetada = categorias[indice_maior]
+categoria_mais_afetada = nomes_categorias[indice_maior]
 
 
 maior_afetados = total_afetados[0]
