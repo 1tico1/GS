@@ -1,3 +1,7 @@
+# EDUARDO VEIGA RM 561575
+# ISABELLA MATTAR RM 562481
+# THIAGO ULRYCH RM565929
+
 tipos_desastres = []
 paises = []
 cidades = []
